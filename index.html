@@ -1,12 +1,12 @@
 <!-- Unit 11 Project
 Requirements
 [ xxx ] $() Select by Element, ID AND Class 
-[  ] Use Three Different jQuery Methods 
+[xx x ] Use Three Different jQuery Methods 
 [ xxxxx ] Add Five CSS Declarations
-[  ] Include Three Images
+[ x xx] Include Three Images
 
 Select ONE Additional 
-[ no ] Feature 1 - Use .hide() & .show() method
+[ x ] Feature 1 - Use .hide() & .show() method
 [ no ] Feature 2 - Use .addClass() method
 [ no ] Feature 3 - Use .slideDown() method
 [ no ] Feature 4 - Use .mouseover() method
@@ -21,7 +21,7 @@ Select ONE Additional
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <img src="channels4_profile.jpg">
+    
     <button id="mem1-button">Memory #1</button>
     <button id="mem2-button">Memory #2</button>
     <button id="mem3-button">Memory #3</button>
@@ -29,16 +29,19 @@ Select ONE Additional
     <ol>
       <li>
         <h3 id="mem1">Memory #1</h3>
+        <img id="CSM" src="channels4_profile.jpg" width="180px">
         <p><span id="M1">More about this <span class="blue">memory.</span></span></p>
       </li>
 
       <li>
         <h3 id="mem2">Memory #2</h3>
+        <img id="Bliz" src="central-park-nyc-after-the-blizzard-2026-v0-s72g0z0b1nmg1.jpg" width="180px">
         <p><span id="M2">More about this <span class="blue">memory.</span></span></p>
       </li>
 
       <li>
         <h3 id="mem3">Memory #3</h3>
+        <img id="Gart" src="download.jpg" width="180px">
         <p><span id="M3">More about this <span class="blue">memory.</span></span></p>
       </li>
     </ol>
@@ -49,21 +52,27 @@ Select ONE Additional
       // ======================== Button #1
       $("#mem1-button").click(function () {
         $("#mem1").css("color", "purple");
-        $("#M1").text("Finding out I had been accepted to Central St. Martins in London, and deciding to go to college there. Woop Woop");
+        $("#CSM").show(2000)
+        $("#M1").text("Finding out I had been accepted to UAL Central St. Martins in London, and deciding to go to college there. Woop Woop");
       });
+      $("#CSM").hide()
       $("#mem1").text("MEMORY #1🎓");
       // ======================== Button #2
       $("#mem2-button").click(function () {
         $("#mem2").css("color", "blue");
+         $("#Bliz").show(2000)
          $("#M2").text("Sleepover with gang during the blizzard, sledding on tupperware lids in Central Park.");
       });
+        $("#Bliz").hide()
       $("#mem2").text("MEMORY #2❄");
       // ======================== Button #3
       $("#mem3-button").click(function () {
         $("#mem3").css("color", "green");
         $("#mem3").text("Coding Parties! 🎉");
+        $("#Gart").show(2000)
         $("#M3").text("Gartic Phone highkey a vibe so happy I didn't take AP Calc or stats.");
       });
+       $("#Gart").hide()
       $("#mem3").text("MEMORY #3👨🏻‍💻");
       // css
       $("li").css("color","rgb(17, 59, 28)");
